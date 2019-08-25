@@ -7,28 +7,28 @@
 
 struct coord
 {
-	int x, y;
+    int x, y;
 
-	coord() : x(0), y(0) {}
+    coord() : x(0), y(0) {}
 
-	coord(int arg1, int arg2)
-	{
-		x = arg1;
-		y = arg2;
-	}
+    coord(int arg1, int arg2)
+    {
+        x = arg1;
+        y = arg2;
+    }
 
-	coord& operator=(const coord& arg)
-	{
-		this->x = arg.x;
-		this->y = arg.y;
+    coord& operator=(const coord& arg)
+    {
+        this->x = arg.x;
+        this->y = arg.y;
 
-		return *this;
-	}
+        return *this;
+    }
 
-	friend coord operator+(const coord& arg1, const coord arg2)
-	{
-		return coord{ arg1.x + arg2.x, arg1.y + arg2.y };
-	}
+    friend coord operator+(const coord& arg1, const coord arg2)
+    {
+        return coord{ arg1.x + arg2.x, arg1.y + arg2.y };
+    }
 };
 
 bitmap_image markBorders(bitmap_image, rgb_t, rgb_t, rgb_t);
