@@ -49,18 +49,19 @@ void centerOfTheContour(std::vector< std::vector<coord> >&);
 
 //constants
 
-const rgb_t red{ 255, 0, 0 },
-			black{ 0, 0, 0 },
-			white{ 255, 255, 255 },
-			d_white{ 250, 250, 250 },
-			yellow{ 255, 255, 0 },
-			green{ 0, 255, 0 },
-			blue{ 0, 0, 255 };
+const rgb_t 
+red{ 255, 0, 0 },
+black{ 0, 0, 0 },
+white{ 255, 255, 255 },
+d_white{ 250, 250, 250 },
+yellow{ 255, 255, 0 },
+green{ 0, 255, 0 },
+blue{ 0, 0, 255 };
 
 //general var
 
 extern std::vector<coord>   borderCoords,
-							borderInCoords, 
-							borderOutCoords;
+borderInCoords,
+borderOutCoords;
 
 #endif 

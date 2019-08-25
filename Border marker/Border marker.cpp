@@ -1,8 +1,9 @@
 ﻿#include "pch.h"
 
-std::vector<coord>  borderCoords(1, coord()),
-					borderInCoords(1, coord()),
-					borderOutCoords(1, coord());
+std::vector<coord>  
+borderCoords(1, coord()),
+borderInCoords(1, coord()),
+borderOutCoords(1, coord());
 
 int main()
 {

@@ -3,11 +3,11 @@
 bitmap_image markBorders(bitmap_image image, rgb_t obs, rgb_t frZ, rgb_t bord)
 {
 	std::vector<coord> mask = { {-1, -1},        {1, -1},
-								        
-								{-1,  1},		 {1,  1}, 
+
+								{-1,  1},		 {1,  1},
 										 {0, -1},
 								{-1,  0},        {1,  0},
-										 {0,  1},        };
+										 {0,  1}, };
 	coord B, shiftCoord;
 
 	for (B.y = 0; B.y < image.height(); B.y++)
@@ -79,7 +79,7 @@ std::vector< std::vector<coord> > countContours(bitmap_image markedimage, std::v
 			else bufCoord = bC.back();
 		}
 	}
-		
+
 	markedimage.save_image("ContoursOutPutMap3.bmp");
 
 	ccC.pop_back();
@@ -110,7 +110,7 @@ bitmap_image fillGapsBetweenWalls(bitmap_image image)
 				if (image.get_pixel(B.x, B.y) == red)
 					image.set_pixel(B.x, B.y, white);
 	}
-	
+
 	return image;
 }
 
@@ -184,7 +184,7 @@ bitmap_image intoTwoColorIm(bitmap_image& image)
 		for (int j = 0; j < image.width(); j++)
 			if (image.get_pixel(j, i) < d_white)
 				image.set_pixel(j, i, black);
-			else 
+			else
 				image.set_pixel(j, i, white);
 
 	return image;
@@ -209,7 +209,7 @@ void centerOfTheContour(std::vector< std::vector<coord> >& ccC)
 		for (int j = 0; j < ccC[i].size(); j++)
 			sum = sum + ccC[i][j];
 
-		center = coord( sum.x / ccC[i].size(), sum.y / ccC[i].size() );
+		center = coord(sum.x / ccC[i].size(), sum.y / ccC[i].size());
 		ccC[i].push_back(center);
 		sum = coord();
 	}
