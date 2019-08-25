@@ -4,10 +4,10 @@ bitmap_image markBorders(bitmap_image image, rgb_t obs, rgb_t frZ, rgb_t bord)
 {
     std::vector<coord> mask = { {-1, -1},        {1, -1},
 
-                                {-1,  1},		 {1,  1},
+                                {-1,  1},        {1,  1},
                                          {0, -1},
                                 {-1,  0},        {1,  0},
-                                         {0,  1}, };
+                                         {0,  1},       };
     coord B, shiftCoord;
 
     for (B.y = 0; B.y < image.height(); B.y++)
@@ -131,10 +131,10 @@ bitmap_image smoothingEdges(bitmap_image image)
 
     std::vector<coord> mask = { {-1, -1},        {1, -1},
 
-                                {-1,  1},		 {1,  1},
+                                {-1,  1},        {1,  1},
                                          {0, -1},
                                 {-1,  0},        {1,  0},
-                                         {0,  1}, };
+                                         {0,  1},       };
 
 
     int quan_white = 0;

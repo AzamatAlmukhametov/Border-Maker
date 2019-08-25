@@ -16,7 +16,7 @@ int main()
     }
 
     intoTwoColorIm(image);
-    image.save_image("twoColorImage.bmp");
+    image.save_image("twoColorImage0.bmp");
 
     std::cout << "inflationFiltering" << std::endl;
     inflationFiltering = smoothingEdges(image);
